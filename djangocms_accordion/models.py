@@ -14,6 +14,7 @@ class AccordionContainer(CMSPlugin):
 @python_2_unicode_compatible
 class AccordionTab(CMSPlugin):
     title = models.CharField(_('title'), max_length=200, default='')
+    extra = models.CharField(_('extra information'), max_length=32, default='', blank=True)
 
     def __str__(self):
         return self.title
